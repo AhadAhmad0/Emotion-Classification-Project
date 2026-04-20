@@ -40,6 +40,8 @@ The application is deployed on Render, using a Procfile:
 web: gunicorn app:app
 Note: On the free tier, the app may experience a short delay due to cold starts.
 
+🔗 *Live Demo:* [Emotion Classification Web App](https://emotion-classification-project-14.onrender.com)
+
 Conclusion:
 
 This project demonstrates practical skills in NLP, machine learning, and web deployment, making it suitable for real-world applications and portfolio presentation.
