@@ -1,48 +1,46 @@
-Emotion Classification Web App:
+# 😊 Emotion Classification
 
-This project is an end-to-end Natural Language Processing (NLP) application that classifies human emotions from text input. It uses TF-IDF vectorization and a Logistic Regression model to predict emotions such as joy, sadness, anger, fear, etc., and is deployed as a web application using Flask on Render.
+A text-based emotion classification web app built with TF-IDF vectorization and Logistic Regression, deployed on Render.
 
-Project Overview:
+## 🔴 Live Demo
 
-1.The system follows a complete machine learning pipeline:
-2.Text preprocessing (cleaning, tokenization, stemming, stopword removal)
-3.Feature extraction using TF-IDF
-4.Model training using Logistic Regression
-5.Label encoding for emotion classes
-6.Deployment using Flask and Gunicorn
-7.Users can enter any text through the web interface, and the model predicts the corresponding emotion in real-time.
+👉 [Try it here](https://emotion-classification-project-14.onrender.com/)
 
-Files and Structure:
+> Note: Free-tier Render hosting — first load may take 30-50 seconds while the server wakes up.
 
-app.py – Flask backend handling routing and predictions
-templates/index.html – Frontend UI
-Emotion_Classification.ipynb – Model training and preprocessing workflow
-train.txt, test.txt, val.txt – Dataset files
+## 🧠 How It Works
 
-Requirements:
+The model classifies input text into emotion categories using a classical NLP pipeline:
 
-The project dependencies are listed in requirements.txt, including:
-1.Flask (web framework)
-2.Pandas, NumPy (data handling)
-3.Scikit-learn (ML model and TF-IDF)
-4.NLTK (text preprocessing)
-5.Gunicorn (production server)
-These are pinned to stable versions to ensure compatibility and smooth deployment.
+1. **Text preprocessing** — cleaning, tokenization
+2. **TF-IDF Vectorization** — converts text into numerical feature vectors based on term frequency
+3. **Logistic Regression** — multi-class classifier trained on the vectorized features
 
-Runtime & Python Version:
+This is a baseline NLP approach — lightweight, fast to train, and interpretable, though it doesn't capture word order or context the way sequence models (like LSTM or transformers) do.
 
-The runtime.txt file specifies:
-python-3.10.13
-This ensures compatibility with machine learning libraries like NumPy, Pandas, and Scikit-learn, avoiding build and dependency errors.
+## 🛠️ Tech Stack
 
-Deployment:
-The application is deployed on Render, using a Procfile:
-web: gunicorn app:app
-Note: On the free tier, the app may experience a short delay due to cold starts.
+Python · Scikit-learn · Flask · TF-IDF · Render
 
-🔗 *Live Demo:* [Emotion Classification Web App](https://emotion-classification-project-14.onrender.com)
+## 📁 Repository Structure
 
-Conclusion:
+```
+├── data/                  # Training/validation/test datasets
+├── notebook/              # Model training notebook
+├── templates/             # Frontend HTML
+├── app.py                 # Flask backend
+├── requirements.txt
+├── train.txt / val.txt / test.txt
+```
 
-This project demonstrates practical skills in NLP, machine learning, and web deployment, making it suitable for real-world applications and portfolio presentation.
+## 🚧 Known Limitations
+
+- TF-IDF + Logistic Regression treats text as a bag of words — it doesn't understand context, sarcasm, or word order
+- Accuracy is bounded by this limitation compared to deep learning approaches (LSTM, BERT)
+- Planned upgrade: replace with a sequence model (LSTM/transformer-based) for better contextual understanding
+
+## 👤 Author
+
+**Ahad Ahmad**
+- GitHub: [@AhadAhmad0](https://github.com/AhadAhmad0)
 
